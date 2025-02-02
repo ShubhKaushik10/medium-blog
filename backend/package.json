@@ -6,7 +6,11 @@
     "build": "tsc"
   },
   "dependencies": {
-    "hono": "^4.6.18"
+    "@prisma/client": "^6.2.1",
+    "@prisma/extension-accelerate": "^1.2.1",
+    "@shubh_kaushik/medium-common": "^1.0.0",
+    "hono": "^4.6.18",
+    "prisma": "^6.2.1"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20250109.0",

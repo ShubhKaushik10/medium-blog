@@ -3,29 +3,10 @@ main = "./src/index.ts"
 compatibility_date = "2025-01-24"
 
 [build]
-command = "npm run build" # Uses the TypeScript build step
+command = "npm run build"
 
-# compatibility_flags = [ "nodejs_compat" ]
-
-# [vars]
-# MY_VAR = "my-variable"
-
-# [[kv_namespaces]]
-# binding = "MY_KV_NAMESPACE"
-# id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-
-# [[r2_buckets]]
-# binding = "MY_BUCKET"
-# bucket_name = "my-bucket"
-
-# [[d1_databases]]
-# binding = "DB"
-# database_name = "my-database"
-# database_id = ""
-
-# [ai]
-# binding = "AI"
-
-# [observability]
-# enabled = true
-# head_sampling_rate = 1
+[vars]
+# The application which will be deployed will pick the environment variable from this file i.e. wrangler.toml and when you'll be accessing/doing something on client, it will be picked from actual .env file 
+# And we want the application to connect to the backend using the connection pool and hence putting that URL here and the original DB URL in .env file which has nothing to do with the backend application and may be used while migrating etc
+DATABASE_URL= "add your prisma accelerate key!"
+JWT_SECRET = "jwt secret key"
